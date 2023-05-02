@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>No access</title>
+    <link type=" text/css" rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+</head>
+<body>
+<div  class='layout' align="center">
+    <header class = 'header'>
+        <div class="smlayout">
+
+        </div>
+        <div class="smlayout">
+            <a class="nav_link" href={{url_for('menu_choice')}}> Главное меню </a>
+            <a class="nav_link" href={{url_for('exit_func')}}> Выйти</a>
+        </div>
+    </header>
+    <br><br>
+    <h1 >Вам отказано в доступе</h1>
+    <br><br>
+    <a href="{{ url_for('menu_choice') }}">Нажмите для возврата к меню</a>
+</div>
+</body>
+</html>

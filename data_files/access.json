@@ -1,0 +1,32 @@
+{
+  "direct": [
+    "bp_auth",
+    "bp_report.start_report",
+    "bp_report.view_rep1",
+    "bp_report.view_rep2",
+    "bp_query",
+    "bp_unload.clear_unload",
+    "bp_unload.save_team",
+    "bp_unload.unload_list",
+    "bp_unload.unload_index",
+    "bp_report","bp_unload"
+  ],
+  "director": [
+    "bp_auth", "bp_report.start_report",
+    "bp_report.view_rep1",
+    "bp_report.view_rep2"
+  ],
+  "manager": [
+    "bp_auth","bp_query", "bp_report"
+  ],
+  "dispet": [
+    "bp_auth", "bp_unload.clear_unload",
+    "bp_unload.save_team",
+    "bp_unload.unload_list",
+    "bp_unload.unload_index"
+  ],
+  "admin": [
+    "bp_auth","bp_query", "bp_report","bp_unload"
+  ],
+  "None": ["bp_unload.timetable"]
+}

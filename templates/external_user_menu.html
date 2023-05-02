@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type=" text/css" rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+</head>
+
+<body>
+<div class="layout">
+    <header class = 'header'>
+        <div class="smlayout">
+
+        </div>
+        <div class="smlayout">
+            <a class="nav_link" href={{url_for('exit_func')}}> Выйти</a>
+        </div>
+    </header>
+  <h1 align = center> Выберите действие</h1>
+  <br><br><br>
+
+    <div align = center>
+          <a href={{url_for('bp_unload.timetable')}}>Просмотреть расписание своих разгрузок</a>
+            <br><br><br>
+          <a href="/exit">Нажмите для выхода из системы</a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Authorisation</title>
+    <link type=" text/css" rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+</head>
+
+<body >
+<div class="layout">
+    <div align="center">
+
+        <h1 class="main_title">Страница авторизации</h1>
+        <form class="auth_wrapper" method="post">
+            <input type="text" class="auth_login" placeholder="Логин" name="login">
+            <input type="password" class="auth_password" placeholder="Пароль" name="password">
+            <input type="submit" class="auth_submit">
+        </form>
+        <p class="message">{{ message }}</p>
+    </div>
+    </div>
+</body>
+</html>

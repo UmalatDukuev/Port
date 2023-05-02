@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Данные о количестве отработанных часов на разгрузках за период</title>
+    <link type=" text/css" rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+
+</head>
+<body>
+<div class="layout">
+    <header class = 'header'>
+        <div class="smlayout">
+        <a class="nav_link" href={{url_for('bp_query.queries')}}> Назад </a>
+        </div>
+
+        <div class="smlayout">
+            <a class="nav_link" href={{url_for('menu_choice')}}> Главное меню </a>
+
+            <a class="nav_link" href={{url_for('exit_func')}}> Выйти</a>
+        </div>
+    </header>
+  <h1 align="center"> Выберите даты</h1>
+    <div align = center>
+        <form action="", method ="POST">
+            <label for="start_date" class="list">Введите начальную дату</label>
+            <input name = start_date id="start_date" type = date placeholder = start_date>
+            <br><br>
+            <label for="end_date" class="list">Введите конечную дату</label>
+            <input name =  end_date id="end_date" type = date placeholder = end_date>
+            <br><br>
+            <input class='bt' type = submit value ="Отправить">
+            <br>
+            <p class="message">{{ message }}</p>
+            <br>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>

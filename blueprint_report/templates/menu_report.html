@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu report</title>
+    <style type = "text/css">
+        .named_list{
+            display: inline-block;
+            width: 500px;
+            text-align:left
+        }
+    </style>
+    <link type=" text/css" rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+</head>
+<body>
+<div class="layout">
+    <header class = 'header'>
+        <div class="smlayout">
+        <a class="nav_link" href={{url_for('menu_choice')}}> Назад </a>
+        </div>
+        <div class="smlayout">
+            <a class="nav_link" href={{url_for('menu_choice')}}> Главное меню </a>
+            <a class="nav_link" href={{url_for('exit_func')}}> Выйти</a>
+        </div>
+    </header>
+ <h1 align="center"> Меню отчетов </h1> <br><br>
+    <div align = center>
+        {% for report in report_list %}
+            <form action="" method="POST">
+                <label for="create_rep" class="named_list">{{report['rep_name']}}</label>
+                <input type="submit" class="rep_bt" name="create_rep" id="create_rep" value="Создать">
+                <input type="submit" class="rep_bt" name="view_rep"  value="Смотреть">
+                <input type="hidden" name="rep_id"  value={{report['rep_id']}}>
+            </form>
+        <br><br><br>
+        {% endfor %}
+
+      <a href={{url_for('menu_choice')}}> Завершить работу с отчетами </a>
+    </div>
+    </div>
+</body>
+</html>

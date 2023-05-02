@@ -1,0 +1,1 @@
+insert into team values(NULL, '$id_un', '$id_em')

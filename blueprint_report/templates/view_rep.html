@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type=" text/css" rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+</head>
+<body>
+<div class="layout" align="center">
+    <header class = 'header'>
+        <div class="smlayout">
+        <a class="nav_link" href={{url_for('bp_report.start_report')}}> Назад </a>
+        </div>
+        <div class="smlayout">
+            <a class="nav_link" href={{url_for('menu_choice')}}> Главное меню </a>
+            <a class="nav_link" href={{url_for('exit_func')}}> Выйти</a>
+        </div>
+    </header>
+
+        <form action="", method ="POST">
+        <h1 align="center", method = POST>{{name}}</h1>
+            <label for="input_year" class="list">Введите год</label>
+            <input type="number" id="input_year" name = input_year placeholder = year><br><br>
+            <label for="input_month" class="list">Введите год</label>
+            <input type="number" id="input_month" name = input_month placeholder = month><br><br>
+            <input type="submit"  class="bt" value="Просмотреть">
+            <br><br>
+            <p class="message">{{message}}</p>
+        </center>
+    </form>
+    </div>
+</body>
+</html>

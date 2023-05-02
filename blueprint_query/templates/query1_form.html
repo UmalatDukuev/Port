@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Данные о регистрации кораблей за один месяц</title>
+    <link type=" text/css" rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+
+</head>
+<body>
+<div class="layout">
+    <div class = 'layout'>
+	<header class = 'header'>
+        <div class="smlayout">
+        <a class="nav_link" href={{url_for('bp_query.queries')}}> Назад </a>
+        </div>
+
+        <div class="smlayout">
+            <a class="nav_link" href={{url_for('menu_choice')}}> Главное меню </a>
+
+            <a class="nav_link" href={{url_for('exit_func')}}> Выйти</a>
+        </div>
+    </header>
+  <h1 align="center"> Выберите месяц и год</h1>
+    <div align = center>
+        <form action="", method ="POST">
+            <label for="month" class="list">Введите месяц регистраций</label>
+            <input name = month_reg id="month" type = number placeholder = month>
+            <br><br>
+            <label for="year" class="list" >Введите год регистраций</label>
+            <input name = year_reg id="year" type = number placeholder = year>
+            <br><br>
+            <input class="bt" type = submit value ="Отправить">
+            <br>
+            <p class="message">{{ message }}</p>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>

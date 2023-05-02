@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ошибка. Пустая команда</title>
+    <link type=" text/css" rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+</head>
+<body>
+<div class = layout align="center">
+<p class="message">'Была попытка создать пустую команду на разгрузку, пожалуйста выберите работников и создадайте команду снова.'</p>
+<a href={{url_for('bp_unload.unload_index')}}> нажмите для создания команды </a>
+</div>
+</body>
+</html>

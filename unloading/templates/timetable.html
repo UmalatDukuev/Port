@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Расписание</title>
+    <link type=" text/css" rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+</head>
+<body>
+<div align="center" class="layout">
+    <header class = 'header'>
+        <div class="smlayout">
+        <a class="nav_link" href={{url_for('menu_choice')}}> Назад </a>
+        </div>
+        <div class="smlayout">
+            <a class="nav_link" href={{url_for('menu_choice')}}> Главное меню </a>
+            <a class="nav_link" href={{url_for('exit_func')}}> Выйти</a>
+        </div>
+    </header>
+ <h1 align="center"> Расписание разгрузок</h1> <br><br>
+
+    <table align="center" border = 1 width = 80%>
+      <tr>
+          {% for column in schema %}
+            <td class= border align="center">{{column}}</td>
+          {% endfor %}
+      </tr>
+        {% for line in result %}
+          <tr>
+           {% for column in line %}
+            <td align = 'center'> {{column}} </td>
+           {% endfor %}
+         </tr>
+        {% endfor %}
+    </table> <br><br>
+    <br><br>
+    <a href={{url_for('menu_choice')}}> Вернуться в меню  </a>
+</div>
+
+</body>
+</html>

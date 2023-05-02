@@ -1,0 +1,19 @@
+{% macro render_worker(worker, show_form=False)%}
+<div style="border-style: solid; border-color: black; margin:5px">
+    <p>
+        <span >Имя: </span>
+        <span >{{worker['name']}} </span>
+        <br>
+        <span >Должность: </span>
+        <span >{{worker['prof']}} </span>
+    </p>
+    {% if show_form %}
+    <div>
+        <form action="" method="post">
+             <input type="hidden" name="emp_id"  value={{worker['id_em']}}>
+            <input type="submit" class="rep_bt" name="action"  value="Добавить">
+        </form>
+    </div>
+    {% endif %}
+</div>
+{% endmacro %}
